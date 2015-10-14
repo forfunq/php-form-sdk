@@ -28,7 +28,7 @@ $upyun = new UpYun('bucket_name', 'form_api_secret', UpYun::ED_TELECOM);
 
 默认参数为自动选择 API 接入点。推荐根据服务器网络情况，手动设置合理的接入点以获取最佳的访问速度。
 
-** 过期时间设置 ** 在初始化 UpYun 时，可以选择设置当前的上传请求授权的过期时间（默认：600s）
+**过期时间设置** 在初始化 UpYun 时，可以选择设置当前的上传请求授权的过期时间（默认：600s）
 
 ```
 $upyun = new UpYun('bucket_name', 'form_api_secret', UpYun::ED_TELECOM, 6000);
