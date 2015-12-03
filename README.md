@@ -11,7 +11,7 @@ require_once('upyun.class.php');
 $upyun = new UpYun('bucket_name', 'form_api_secret');
 ```
 
-参数 `bucket_name` 为空间名称，`form_api_secret` 为表单密钥。
+参数 `bucket_name` 为服务名称，`form_api_secret` 为表单密钥。
 
 根据国内的网络情况，又拍云存储 API 目前提供了电信、联通、移动三个接入点，在初始化的时候可以添加可选的第四个参数来指定 API 接入点
 
