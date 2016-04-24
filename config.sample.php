@@ -1,7 +1,7 @@
 <?php
 require_once('../upyun.class.php');
 
-$upyun = new UpYun('bucket_name', 'form_api_secret');
+@$upyun = new UpYun('bucket_name', 'form_api_secret');
 
 $opts = array();
 // 必选参数
