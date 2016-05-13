@@ -4,6 +4,8 @@
 
 #### 使用说明
 
+下载后，修改文件 `config.sample.php` 为 `config.php`
+
 ##### 初始化 UpYun
 
 ```
