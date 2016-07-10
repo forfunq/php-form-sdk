@@ -1,6 +1,6 @@
 ### 又拍云 PHP 表单 SDK
 
-又拍云存储 PHP 表单 SDK，基于 [又拍云存储 FROM API 接口](http://docs.upyun.com/api/#FORM_API) 开发。
+又拍云存储 PHP 表单 SDK，基于 [又拍云存储 FROM API 接口](http://docs.upyun.com/api/form_api/) 开发。
 
 #### 使用说明
 
