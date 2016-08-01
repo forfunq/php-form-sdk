@@ -9,7 +9,7 @@ class UpYun {
 
     private $_bucket_name;
     private $_form_api_secret;
-    private $_expiration = 600;
+    private $_expiration = 3600;
 
     protected $endpoint;
 
@@ -19,7 +19,7 @@ class UpYun {
      * @param $form_api_secret 表单密钥
      * @return object
      */
-    public function __construct($bucket_name, $form_api_secret, $endpoint, $expiration = 600) {
+    public function __construct($bucket_name, $form_api_secret, $endpoint, $expiration = 3600) {
         $this->_bucket_name = $bucket_name;
         $this->_form_api_secret = $form_api_secret;
         $this->_expiration = $expiration;

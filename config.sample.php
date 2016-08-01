@@ -17,15 +17,24 @@ $opts['image-width-range'] = '';  // 图片宽度限制，如：0,1024 单位：
 $opts['image-height-range'] = ''; // 图片高度限制，如：0,1024 单位：像素
 $opts['notify-url'] = '';   // 异步回调 url，如：http://img.helloword.com/notify.php
 $opts['return-url'] = 'http://localhost/return.php';    // 同步跳转 url，如：http://localhost/return.php
-$opts['x-gmkerl-thumbnail'] = '';   // 缩略图版本名称，如：small
-$opts['x-gmkerl-type'] = '';    // 缩略类型，如：fix_max
-$opts['x-gmkerl-value'] = '';    // 缩略类型对应的参数值，根据缩略类型填写
-$opts['x-gmkerl-quality'] = ''; // 缩略图质量，0~100，推荐 65~75
-$opts['x-gmkerl-unsharp'] = ''; // 图片锐化，默认 true
-$opts['x-gmkerl-rotate'] = '';  // 图片旋转，参数：auto 90 180 或 270
-$opts['x-gmkerl-crop'] = '';    // 图片裁剪，格式：x,y,width,height
-$opts['x-gmkerl-exif-switch'] = ''; // 是否保留 exif 信息，参数：true
 $opts['ext-param'] = '';    // 额外参数
+$opts['apps'] = array(
+    array(                      // 异步作图服务，可以多个任务
+        'name'=>'thumb',        // 异步任务名称
+        'x-gmkerl-thumb'=>'',   // 作图参数，如：/fw/100/quality/95，更多参数参考：http://docs.upyun.com/cloud/image/#_7
+        'save_as'=>'',          // 结果存放路径，如：/path/to/fw_100.jpg
+        // 'notify_url': ''     // 回调地址，可选，可以覆盖表单参数中的 notify_url
+    )
+);
+$opts['apps'] = array(
+    array(                   // 异步音视频处理服务，可以多个任务
+        'name'=>'naga',      // 异步任务名称
+        'type'=>'',          // 类型，如：video hls thumbnail vconcat audio aconcat 或 probe，这里以 video 为例。
+        'avopts'=>'',        // 处理参数，如：/f/flv 输出 flv 格式，更多参考：http://docs.upyun.com/cloud/av/#_9
+        'return_info'=>'',   // 是否返回 JSON 格式元数据，默认 false
+        'save_as'=>''        // 结果保存路径，如：/a/b.flv
+    )
+);
  */
 
 $policy = $upyun->policyCreate($opts);

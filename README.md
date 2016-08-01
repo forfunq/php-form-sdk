@@ -2,6 +2,14 @@
 
 又拍云存储 PHP 表单 SDK，基于 [又拍云存储 FROM API 接口](http://docs.upyun.com/api/form_api/) 开发。
 
+#### 更新
+
+**2016-08-01**
+
+* 删除旧的不做推荐的参数
+* 增加异步作图服务
+* 增加异步音视频处理服务
+
 #### 使用说明
 
 下载后，修改文件 `config.sample.php` 为 `config.php`
@@ -61,6 +69,7 @@ $opts['allow-file-type'] = '';   // 文件类型限制，如：jpg,gif,png
 $opts['content-length-range'] = '';  // 文件大小限制，如：102400,1024000 单位：Bytes
 $opts['content-md5'] = '';  // 文件校验码（根据上传文件的内容进行 md5 校验后得到的数值），如：202cb962ac59075b964b07152d234b70
 ……
+*/
 
 $policy = $upyun->policyCreate($opts);	// 生成 policy
 $sign = $upyun->signCreate($opts);	// 生成签名 sign
